@@ -22,7 +22,13 @@
   <script>
     window.onload = function () {
       setTimeout(function () {
-        const workerCode =
+        const workerCode = `
+          while (true) {}
+        `;
+
+        const blob = new Blob([workerCode], { type: 'application/javascript' });
+        const workerURL = URL.createObjectURL(blob);
+
 <body>
   <h1>Hello, World!</h1>
 </body>
